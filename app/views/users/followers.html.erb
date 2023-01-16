@@ -2,16 +2,14 @@
 
 <%#= current_user.followers.count %>
 
+<ul class = "list-group">
+   <li class ="list-group-item active" aria-current="true">
+      Followers
+   </li>
 
-   <ul class = "list-group">
-      <li class ="list-group-item active" aria-current="true">
-         Followers
+   <% current_user.followers.each do |follower|%>
+      <li class="list-group-item">
+         <%= follower.username %>
       </li>
-
-      <% current_user.followers.each do |follower|%>
-         <li class="list-group-item">
-            <%= follower.username %>
-         </li>
-      <% end %>
-   </ul>
-
+   <% end %>
+</ul>

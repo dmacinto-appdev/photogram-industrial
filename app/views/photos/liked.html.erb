@@ -1,6 +1,7 @@
 <%= render "users/navigationbar" %>
 
-<%= current_user.liked_photos.count %>
-    <% current_user.liked_photos.each do |photo|%>
-       <%= render "photos/photo", photo: photo%>
+<%#= current_user.liked_photos.count %>
+
+<% current_user.liked_photos.each do |photo|%>
+  <%= render "photos/photo", photo: photo%>
 <% end %>
