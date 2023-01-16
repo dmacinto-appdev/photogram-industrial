@@ -1,0 +1,9 @@
+
+<%= render "users/navigationbar" %>
+
+<%= current_user.feed.count %>
+
+
+    <% current_user.feed.each do |photo|%>
+       <%= render "photos/photo", photo: photo%>
+    <% end %>
